@@ -1,4 +1,4 @@
-# generator-bonsai
+# generator-trybonsai
 
 > Bonsai React component generator
 
@@ -6,11 +6,11 @@ The `bonsai:component` generator creates a React component directory with a Jest
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-bonsai using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and generator-trybonsai using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```shell
 npm install -g yo
-npm install -g generator-bonsai
+npm install -g generator-trybonsai
 ```
 
 ## Usage

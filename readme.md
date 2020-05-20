@@ -1,8 +1,8 @@
 # generator-trybonsai
 
-> Bonsai React component generator
+> Bonsai React component generator powered by Yeomaan
 
-The `bonsai:component` generator creates a React component directory with a Jest test file, Storybook story file and a simple Typescript base React component to speed up creating of new React components.
+The `trybonsai:component` generator creates a React component directory with a Jest test file, Storybook story file and a simple Typescript base React component to speed up creating of new React components.
 
 ## Installation
 
@@ -18,10 +18,10 @@ npm install -g generator-trybonsai
 Generate a new React component folder:
 
 ```bash
-yo bonsai:component
+yo trybonsai:component
 
 # or specify a name directly:
-yo bonsai:component MyComponent
+yo trybonsai:component MyComponent
 ```
 
 This will create a component directory at `src/components/MyComponent` with the following structure:

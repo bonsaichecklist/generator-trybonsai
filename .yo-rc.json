@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Dana Woodman",
+      "authorEmail": "dana@trybonsai.com",
+      "authorUrl": "https://trybonsai.com"
+    }
+  }
+}

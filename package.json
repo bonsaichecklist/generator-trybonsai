@@ -1,0 +1,78 @@
+{
+  "name": "generator-bonsai",
+  "version": "0.1.0",
+  "description": "Bonsai official app generators",
+  "scripts": {
+    "pretest": "eslint .",
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "postpublish": "git push origin --all; git push origin --tags"
+  },
+  "homepage": "https://github.com/bonsaichecklist/app",
+  "author": {
+    "name": "Dana Woodman",
+    "email": "dana@trybonsai.com",
+    "url": "https://trybonsai.com"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "remoteit",
+    "remote.it",
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "yeoman-test": "^2.6.0",
+    "yeoman-assert": "^3.1.1",
+    "eslint": "^7.0.0",
+    "prettier": "^2.0.5",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.4",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-config-xo": "^0.29.1",
+    "jest": "^26.0.1"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "dependencies": {
+    "camelcase": "6.0.0",
+    "chalk": "^4.0.0",
+    "yeoman-generator": "^4.10.1",
+    "yosay": "^2.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "repository": "bonsaichecklist/app",
+  "license": "MIT"
+}

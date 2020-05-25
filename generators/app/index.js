@@ -6,7 +6,7 @@ const chalk = require("chalk");
 module.exports = class extends Generator {
   async prompting() {
     console.log(
-      chalk.red.bold.underline("Please use bonsai:component instead!")
+      chalk.red.bold.underline("Please use trybonsai:component instead!")
     );
   }
 };

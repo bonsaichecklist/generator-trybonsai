@@ -30,14 +30,14 @@ module.exports = class extends Generator {
       {
         type: "input",
         name: "name",
-        message: "What is the name of your component? (e.g. MyComponent)"
-      }
+        message: "What is the name of your component? (e.g. MyComponent)",
+      },
     ]);
   }
 
   writing() {
     const name = camelCase(this.options.name || this.answers.name, {
-      pascalCase: true
+      pascalCase: true,
     });
 
     // Copy index

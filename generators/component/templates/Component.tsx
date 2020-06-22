@@ -1,11 +1,9 @@
 import React from 'react'
 
 export interface <%= name %>Props {
-  text?: string
+  children?: React.ReactNode
 }
 
-export function <%= name %>({
-  text = 'Hello World!',
-}: <%= name %>Props): JSX.Element {
-  return <div>{text}</div>
+export function <%= name %>({ children }: <%= name %>Props): JSX.Element {
+  return <div>{children}</div>
 }

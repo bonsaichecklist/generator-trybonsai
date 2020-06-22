@@ -1,9 +1,11 @@
 import React from 'react'
-import { <%= name %> } from './<%= name %>'
+import { <%= name %>, <%= name %>Props } from './<%= name %>'
 
 export default {
   component: <%= name %>,
   title: '<%= name %>',
 }
 
-export const Example = (): JSX.Element => <<%= name %> /> 
+export function Example(args: <%= name %>Props): JSX.Element {
+  return <<%= name %> {...args} />
+}

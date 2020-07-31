@@ -17,7 +17,7 @@ npm install -g generator-trybonsai
 
 Generate a new React component folder:
 
-```bash
+```shell
 yo trybonsai:component
 
 # or specify a name directly:
@@ -34,6 +34,12 @@ src/
       MyComponent.tsx
       MyComponent.test.tsx
       MyComponent.stories.tsx
+```
+
+You can optionally pass a path to place the component wherever you want:
+
+```shell
+yo trybonsai:component web/components/Foo
 ```
 
 ## License

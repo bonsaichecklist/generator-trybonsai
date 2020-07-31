@@ -36,35 +36,47 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    const name = camelCase(this.options.name || this.answers.name, {
-      pascalCase: true,
-    });
+    const rawName = this.options.name || this.answers.name;
+
+    let name = rawName;
+    let basePath = "src/components";
+
+    // If the name includes a path, parse out the file name and
+    // base path and use those.
+    if (rawName.includes("/")) {
+      const parts = rawName.split("/");
+      name = parts.pop();
+      basePath = parts.join("/");
+    }
+
+    // Make sure name is CamelCased
+    name = camelCase(name, { pascalCase: true });
 
     // Copy index
     this.fs.copyTpl(
       this.templatePath("index.ts"),
-      this.destinationPath(`src/components/${name}/index.ts`),
+      this.destinationPath(`${basePath}/${name}/index.ts`),
       { name }
     );
 
     // Copy component
     this.fs.copyTpl(
       this.templatePath("Component.tsx"),
-      this.destinationPath(`src/components/${name}/${name}.tsx`),
+      this.destinationPath(`${basePath}/${name}/${name}.tsx`),
       { name }
     );
 
     // Copy test
     this.fs.copyTpl(
       this.templatePath("Component.test.tsx"),
-      this.destinationPath(`src/components/${name}/${name}.test.tsx`),
+      this.destinationPath(`${basePath}/${name}/${name}.test.tsx`),
       { name }
     );
 
     // Copy story
     this.fs.copyTpl(
       this.templatePath("Component.stories.tsx"),
-      this.destinationPath(`src/components/${name}/${name}.stories.tsx`),
+      this.destinationPath(`${basePath}/${name}/${name}.stories.tsx`),
       { name }
     );
   }

@@ -1,5 +1,5 @@
-import React from "react"
-import { <%= name %>, <%= name %>Props } from "./<%= name %>"
+import React from 'react'
+import { <%= name %>, <%= name %>Props } from '.'
 
 export default {
   component: <%= name %>,

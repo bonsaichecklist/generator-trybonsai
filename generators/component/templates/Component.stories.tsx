@@ -3,7 +3,7 @@ import { <%= name %>, <%= name %>Props } from '.'
 
 export default {
   component: <%= name %>,
-  title: "<%= name %>",
+  title: "components/<%= name %>",
 }
 
 export function Example(args: <%= name %>Props): JSX.Element {

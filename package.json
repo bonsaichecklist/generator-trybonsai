@@ -1,6 +1,6 @@
 {
   "name": "generator-trybonsai",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Bonsai official app generators",
   "scripts": {
     "pretest": "eslint .",
